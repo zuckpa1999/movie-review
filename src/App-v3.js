@@ -55,7 +55,7 @@ export default function App() {
         <Box>
           {selectedId ? <MovieDetails
             selectedId={selectedId}
-            handleCloseMovie={handleCloseMovie}
+               handleCloseMovie={handleCloseMovie}
             onAddWatched={handleAddWatch}
             watched={watched}
           /> :

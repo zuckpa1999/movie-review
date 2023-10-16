@@ -20,7 +20,7 @@ export function useMovies(query,callback){
               { signal: controller.signal })
     
     
-            if (!res.ok) throw new Error('Somethjing went wrong with fetching movies')
+            if (!res.ok) throw new Error('Something went wrong with fetching movies')
             const data = await res.json()
             if (data.Response === 'False') throw new Error('Movie not found')
             setMovies(data.Search)
@@ -35,8 +35,8 @@ export function useMovies(query,callback){
           }
           // Hook
           //only run on mount/ first time
-          // effect/si de effect => function, run after UIpaintedon the screen
-          // stricmMode run effect twice in the development mode
+          // effect/side effect => function, run after UIpaintedon the screen
+          // strict Mode run effect twice in the development mode
         }
     
         if (query.length < 3) {
